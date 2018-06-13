@@ -38,7 +38,7 @@ def pizza_maker
                 puts "PEPPERONI AND GREEN PEPPERS MUSHROOMS OLIVES CHIVES"
                 sleep 0.3
                 puts "pepperoni and green peppers mushrooms olives chives"
-                sleep 1
+                sleep 0.3
                 puts "NEED THERAPY, THERAPY...ADVERTISING CAUSES NEED THERAPY, THERAPY!"
                 sleep 1
                 pizza_maker
