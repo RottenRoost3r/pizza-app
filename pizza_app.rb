@@ -36,11 +36,21 @@ def pizza_maker
                 pizza_maker
             elsif answer == "pizza pie"
                 puts "PEPPERONI AND GREEN PEPPERS MUSHROOMS OLIVES CHIVES"
-                sleep 0.3
-                puts "pepperoni and green peppers mushrooms olives chives"
-                sleep 0.3
-                puts "NEED THERAPY, THERAPY...ADVERTISING CAUSES NEED THERAPY, THERAPY!"
                 sleep 1
+                puts "pepperoni and green peppers mushrooms olives chives"
+                sleep 1
+                puts "NEED"
+                sleep 0.3
+                puts "THERAPY,"
+                sleep 0.3
+                puts "THERAPY,"
+                sleep 0.3
+                puts "ADVERTISING CAUSES NEED,"
+                sleep 0.3
+                puts "THERAPY,"
+                sleep 0.3
+                puts "THERAPY!"
+                sleep 2
                 pizza_maker
             else 
         puts "please type yes or no"
