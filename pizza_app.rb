@@ -50,18 +50,18 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese)
     end
     case pizza_crust.to_i
     when 1; pizza_crust = crust[0]; 
-    when 2; pizza_crust = crust[1]; price += 1.00
+    when 2; pizza_crust = crust[1]; price += 1.10
     when 3; pizza_crust = crust[2]; price += 3.50
     when 4; pizza_crust = crust[3]; price += 5.50
     end
     case pizza_sauce.to_i
-    when 1; pizza_sauce = sauce[0]; price += 1.00
+    when 1; pizza_sauce = sauce[0]; price += 1.10
     when 2; pizza_sauce = sauce[1]; price += 1.50
     when 3; pizza_sauce = sauce[2]; price += 1.50
     end 
     case pizza_veg.to_i
-    when 1; pizza_veg = veggies[0]; price += 1.00
-    when 2; pizza_veg = veggies[1]; price += 1.00
+    when 1; pizza_veg = veggies[0]; price += 1.30
+    when 2; pizza_veg = veggies[1]; price += 1.30
     when 3; pizza_veg = veggies[2]; price += 1.10
     end
     case pizza_cheese.to_i
@@ -71,7 +71,7 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese)
     end
     total = price
     puts "okay, that'll be a #{pizza_size} pizza, on #{pizza_crust} crust, with #{pizza_sauce} sauce, toppings include #{pizza_meat}, #{pizza_veg}, and #{pizza_cheese} cheese. "
-    puts " that'll come to $#{total}"
+    puts " that'll come to $#{total.round(1)}"
 end
  pizza_maker(size, meats, crust, sauce, veggies, cheese)
 
