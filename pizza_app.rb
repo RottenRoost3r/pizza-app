@@ -2,32 +2,26 @@ def size()
     size = ["small", "medium", "large"]
     size[0..2]
 end
-
 def meats ()
     meats = ["pepperoni", "sausage" ,"ham", "bacon"]
     meats[0..3]
 end
-
 def crust ()
     crust = ["normal", "thin", "stuffed", "deep dish"]
     crust[0..3]
 end
-
 def sauce()
     sauces = ["marinara", "spicy", "ranch"]
     sauces[0..2]
 end
-
 def veggies()
     veggies = ["onions", "green peppers", "bananna peppers"]
     veggies[0..2]
 end
-
 def cheese()
     cheese = ["mozzerella", "cheddar", "pepper jack"]
     cheese[0..2]
 end
-
 def pizza_maker(size, meats, crust, sauce, veggies, cheese)
     puts "Enter the corresponding number to make your selections"
     puts "please select size" ;print "#{size()} : "; pizza_size = $stdin.gets.chomp
@@ -69,6 +63,14 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese)
     when 2; pizza_cheese = cheese[1]; price += 1.10
     when 3; pizza_cheese = cheese[2]; price += 2.50
     end
+   
+    puts "Do you want that delivered [y/n]"
+    answer = $stdin.gets.chomp
+    if answer == "y" 
+        price += 10.00
+    elsif answer == "n"
+        price += 1.00  
+    end  
     total = price
     puts "okay, that'll be a #{pizza_size} pizza, on #{pizza_crust} crust, with #{pizza_sauce} sauce, toppings include #{pizza_meat}, #{pizza_veg}, and #{pizza_cheese} cheese. "
     puts " that'll come to $#{sprintf("%.2f", total)}"
