@@ -32,7 +32,7 @@ def drinks()
 end
 def cls
     system('cls')
-  end
+end
 def pizza_maker(size, meats, crust, sauce, veggies, cheese); cls
     puts "Enter the corresponding number to make your selections"
     puts "please select size" ;print "#{size()} : "; pizza_size = $stdin.gets.chomp; cls
@@ -110,7 +110,7 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese); cls
         puts "how many miles away do you live?"; miles = gets.chomp.to_i; cls
         price += 10.00
             if miles >=50
-            (price + 5) + (0.10 * miles)
+                (price + 5) + (0.10 * miles)
             else; price +5
             end
     elsif answer == "n"; cls
