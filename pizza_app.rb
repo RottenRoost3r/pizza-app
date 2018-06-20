@@ -76,8 +76,8 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese); cls
     end
    
     puts "would you like anything else? [y/n]"
-    answer = $stdin.gets.chomp
-    if answer == "y" ; cls
+    special_menu = $stdin.gets.chomp
+    if special_menu == "y" ; cls
         puts "please enter the corresponding number to make your selection"
         print "#{special()} : "; special_selection = $stdin.gets.chomp; cls
             case special_selection.to_f
@@ -85,12 +85,12 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese); cls
             when 2; special_selection = special[1]; price += 5.00
             when 3; special_selection = special[2]; price += 6.50
             end
-    elsif answer == "n"; cls
+    elsif special_menu == "n"; cls
     end
 
     puts "anything to drink?[y/n]"
-    answer = $stdin.gets.chomp
-    if answer == "y"; cls
+    drink_menu = $stdin.gets.chomp
+    if drink_menu == "y"; cls
         puts  "we only serve pepsi"
         puts "please enter the corresponding number to make your selection"
         print "#{drinks} : "; drink_order = $stdin.gets.chomp; cls
@@ -99,7 +99,7 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese); cls
             when 2; drink_order = drinks[1]; price += 3.00
             when 3; drink_order = drinks[2]; price += 5.00
             end
-    elsif answer =="n"; cls
+    elsif drink_menu =="n"; cls
         price += 0
        
     end
@@ -117,9 +117,19 @@ def pizza_maker(size, meats, crust, sauce, veggies, cheese); cls
         price += 0
     end  
    
-    total = price
+    total = (price * 1.15)
     puts "okay, that'll be a #{pizza_size} pizza, on #{pizza_crust} crust, with #{pizza_sauce} sauce, toppings include #{pizza_meat}, #{pizza_veg}, and #{pizza_cheese} cheese. "
-    puts "you also ordered #{special_selection} and a #{drink_order}"
+   if special_menu == "y"
+    puts "you also ordered #{special_selection}"
+   elsif special_menu == "n"
+   end
+
+   if drink_menu == "y"
+    puts "you also ordered a #{drink_order}"
+   elsif drink_menu == "n"
+   end
+
+
     puts " that'll come to $#{sprintf("%.2f", total)}"
 end
  pizza_maker(size, meats, crust, sauce, veggies, cheese)
